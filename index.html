@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Shardfall: The Sundering is a dark fantasy trading card game with real-time PvP, an offline campaign, deck building, and 192 collectible cards.">
+  <meta property="og:title" content="Shardfall: The Sundering TCG">
+  <meta property="og:description" content="Vael has fallen. Build the deck that survives the Sundering.">
+  <meta property="og:image" content="https://fareza777.github.io/assets/shardfall-icon.png">
+  <title>Shardfall: The Sundering TCG</title>
+  <style>
+    :root { color-scheme: dark; --ink:#e9e4d9; --muted:#9da9b0; --gold:#d2ad68; --line:#2a3139; --panel:#11161d; --ember:#e9562d; --aether:#55c7dd; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; color:var(--ink); background:radial-gradient(circle at 70% 18%,rgba(48,126,153,.18),transparent 26rem),radial-gradient(circle at 15% 55%,rgba(180,57,31,.16),transparent 30rem),#080b10; font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; }
+    body::before { content:""; position:fixed; inset:0; pointer-events:none; opacity:.24; background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px); background-size:42px 42px; mask-image:linear-gradient(to bottom,black,transparent 75%); }
+    main { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    nav { display:flex; align-items:center; justify-content:space-between; padding:24px 0; border-bottom:1px solid rgba(210,173,104,.22); }
+    .brand { color:var(--ink); text-decoration:none; font-family:Georgia,serif; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    .brand span { color:var(--gold); }
+    nav a:last-child,.button { color:#090b0f; background:linear-gradient(135deg,#e3c17e,#a97832); padding:11px 17px; border-radius:8px; text-decoration:none; font-weight:800; box-shadow:0 10px 32px rgba(184,126,46,.18); }
+    .hero { display:grid; grid-template-columns:1.08fr .92fr; align-items:center; gap:72px; min-height:680px; padding:76px 0 92px; }
+    .eyebrow { color:var(--gold); text-transform:uppercase; letter-spacing:.22em; font-size:.76rem; font-weight:800; }
+    h1 { margin:14px 0 20px; max-width:760px; font:700 clamp(3.2rem,7vw,6.6rem)/.9 Georgia,serif; letter-spacing:-.055em; }
+    h1 em { color:transparent; -webkit-text-stroke:1px var(--gold); font-style:normal; }
+    .lead { max-width:650px; color:#b9c1c5; font-size:clamp(1rem,2vw,1.22rem); }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
+    .button.secondary { color:var(--ink); background:transparent; border:1px solid #46505a; box-shadow:none; }
+    .icon-wrap { position:relative; isolation:isolate; }
+    .icon-wrap::before { content:""; position:absolute; inset:15%; z-index:-1; background:conic-gradient(from 210deg,var(--ember),var(--gold),var(--aether),var(--ember)); filter:blur(58px); opacity:.33; }
+    .icon { display:block; width:100%; border-radius:27%; box-shadow:0 32px 80px rgba(0,0,0,.58),0 0 0 1px rgba(210,173,104,.3); transform:rotate(1.5deg); }
+    .facts { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-bottom:80px; overflow:hidden; border:1px solid var(--line); border-radius:12px; background:var(--line); }
+    .fact { padding:28px; background:rgba(14,19,25,.92); }
+    .fact strong { display:block; color:var(--gold); font:700 2rem/1 Georgia,serif; }
+    .fact span { color:var(--muted); font-size:.9rem; }
+    .features { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; padding-bottom:96px; }
+    .card { min-height:220px; padding:28px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(145deg,rgba(23,29,37,.94),rgba(10,14,19,.96)); }
+    .card small { color:var(--gold); letter-spacing:.14em; text-transform:uppercase; font-weight:800; }
+    .card h2 { margin:14px 0 10px; font:700 1.55rem/1.15 Georgia,serif; }
+    .card p { margin:0; color:var(--muted); }
+    footer { display:flex; justify-content:space-between; gap:24px; padding:30px 0 44px; border-top:1px solid var(--line); color:#77838b; font-size:.88rem; }
+    footer a { color:#bfc7cb; }
+    @media (max-width:780px) { main{width:min(100% - 28px,680px)} .hero{grid-template-columns:1fr;gap:44px;padding:54px 0 66px}.icon-wrap{max-width:430px;order:-1;margin:auto}.facts,.features{grid-template-columns:1fr}.facts{gap:1px}.features{padding-bottom:64px}h1{font-size:clamp(3rem,16vw,5rem)}footer{flex-direction:column}.brand{font-size:.82rem} }
+  </style>
+</head>
+<body>
+  <main>
+    <nav>
+      <a class="brand" href="/"><span>Shardfall</span> · The Sundering</a>
+      <a href="https://play.google.com/apps/testing/com.shardfall.shardfall">Join the test</a>
+    </nav>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Dark fantasy trading card game</div>
+        <h1>Vael fell.<br><em>Aethyr broke.</em></h1>
+        <p class="lead">Build a 40-card deck from five rival Dominions. Follow the fractured world's campaign, master tactical Arena runs, or challenge another player in real-time PvP.</p>
+        <div class="actions">
+          <a class="button" href="https://play.google.com/apps/testing/com.shardfall.shardfall">Play the closed test</a>
+          <a class="button secondary" href="https://youtu.be/odO1Ks-SkW8">Watch the trailer</a>
+        </div>
+      </div>
+      <div class="icon-wrap"><img class="icon" src="/assets/shardfall-icon.png" alt="Vael shattering the world in the Shardfall app icon"></div>
+    </section>
+    <section class="facts" aria-label="Game highlights">
+      <div class="fact"><strong>192</strong><span>cards in the first set</span></div>
+      <div class="fact"><strong>5</strong><span>original Dominions</span></div>
+      <div class="fact"><strong>40</strong><span>cards in every battle deck</span></div>
+    </section>
+    <section class="features">
+      <article class="card"><small>01 · The Sundering</small><h2>Story-rich campaign</h2><p>Walk through the Waking Grove and uncover what survived when the star Vael split Aethyr.</p></article>
+      <article class="card"><small>02 · The Duel</small><h2>Real-time PvP</h2><p>Read the board, assign blockers, and time each response against another signed-in player.</p></article>
+      <article class="card"><small>03 · The Forge</small><h2>Build your answer</h2><p>Open Shard Packs, craft cards, and combine Verdance, Pyre, Tide, Dawn, and Gloom strategies.</p></article>
+    </section>
+    <footer>
+      <span>© 2026 F7 Developer. Shardfall: The Sundering.</span>
+      <span><a href="/shardfall/privacy.html">Privacy Policy</a> · <a href="mailto:fajar.mreza@gmail.com">Support</a></span>
+    </footer>
+  </main>
+</body>
+</html>
