@@ -38,9 +38,16 @@
     .card small { color:var(--gold); letter-spacing:.14em; text-transform:uppercase; font-weight:800; }
     .card h2 { margin:14px 0 10px; font:700 1.55rem/1.15 Georgia,serif; }
     .card p { margin:0; color:var(--muted); }
+    .verification { display:flex; align-items:center; justify-content:space-between; gap:24px; margin:0 0 56px; padding:22px 24px; border:1px solid rgba(210,173,104,.28); border-radius:12px; background:linear-gradient(120deg,rgba(29,34,40,.96),rgba(13,18,24,.96)); }
+    .verification-copy { max-width:620px; }
+    .verification-copy small { color:var(--gold); letter-spacing:.14em; text-transform:uppercase; font-weight:800; }
+    .verification-copy h2 { margin:10px 0 6px; font:700 1.5rem/1.15 Georgia,serif; }
+    .verification-copy p { margin:0; color:var(--muted); }
+    .pixelpicked-badge { display:block; flex:0 0 auto; }
+    .pixelpicked-badge img { display:block; width:250px; max-width:100%; height:auto; }
     footer { display:flex; justify-content:space-between; gap:24px; padding:30px 0 44px; border-top:1px solid var(--line); color:#77838b; font-size:.88rem; }
     footer a { color:#bfc7cb; }
-    @media (max-width:780px) { main{width:min(100% - 28px,680px)} .hero{grid-template-columns:1fr;gap:44px;padding:54px 0 66px}.icon-wrap{max-width:430px;order:-1;margin:auto}.facts,.features{grid-template-columns:1fr}.facts{gap:1px}.features{padding-bottom:64px}h1{font-size:clamp(3rem,16vw,5rem)}footer{flex-direction:column}.brand{font-size:.82rem} }
+    @media (max-width:780px) { main{width:min(100% - 28px,680px)} .hero{grid-template-columns:1fr;gap:44px;padding:54px 0 66px}.icon-wrap{max-width:430px;order:-1;margin:auto}.facts,.features{grid-template-columns:1fr}.facts{gap:1px}.features{padding-bottom:64px}.verification{flex-direction:column;align-items:flex-start;margin-bottom:44px}h1{font-size:clamp(3rem,16vw,5rem)}footer{flex-direction:column}.brand{font-size:.82rem} }
   </style>
 </head>
 <body>
@@ -70,6 +77,16 @@
       <article class="card"><small>01 · The Sundering</small><h2>Story-rich campaign</h2><p>Walk through the Waking Grove and uncover what survived when the star Vael split Aethyr.</p></article>
       <article class="card"><small>02 · The Duel</small><h2>Real-time PvP</h2><p>Read the board, assign blockers, and time each response against another signed-in player.</p></article>
       <article class="card"><small>03 · The Forge</small><h2>Build your answer</h2><p>Open Shard Packs, craft cards, and combine Verdance, Pyre, Tide, Dawn, and Gloom strategies.</p></article>
+    </section>
+    <section class="verification" aria-label="PixelPicked game profile">
+      <div class="verification-copy">
+        <small>04 · The signal</small>
+        <h2>Keep watch on the Shardfall profile</h2>
+        <p>See the game's approval status, media, and latest launch links on PixelPicked.</p>
+      </div>
+      <a class="pixelpicked-badge" href="https://pixelpicked.com/game/4dlNisqa64h/shardfall-the-sundering-tcg/" target="_blank" rel="noopener">
+        <img src="https://api.pixelpicked.com/api/badges/4dlNisqa64h/live.png?theme=dark" width="250" height="54" alt="Approved on PixelPicked" />
+      </a>
     </section>
     <footer>
       <span>© 2026 F7 Developer. Shardfall: The Sundering.</span>
