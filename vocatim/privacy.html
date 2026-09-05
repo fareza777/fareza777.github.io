@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f6f3">
-  <meta name="description" content="Vocatim privacy policy, effective 20 August 2026.">
+  <meta name="description" content="Vocatim privacy policy, effective 5 September 2026. Offline transcription, optional online audio processing, advertising, and data controls.">
   <title>Privacy Policy — Vocatim</title>
   <style>
     :root{color-scheme:light;--ink:#242422;--muted:#73716c;--bone:#f7f6f3;--paper:#fff;--line:#e7e5e0;--blue:#e1f3fe;--blue-ink:#1f6c9f}*{box-sizing:border-box}body{margin:0;background:var(--bone);color:var(--ink);font-family:"Helvetica Neue",Arial,sans-serif;line-height:1.7}.shell{width:min(860px,calc(100% - 40px));margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}.nav a{color:var(--muted);text-decoration:none}.hero{padding:88px 0 44px}.tag{display:inline-block;padding:5px 10px;border-radius:999px;background:var(--blue);color:var(--blue-ink);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3{font-family:Georgia,"Times New Roman",serif;letter-spacing:-.025em}h1{font-size:clamp(44px,7vw,70px);line-height:1.04;margin:24px 0 18px}h2{font-size:30px;margin:52px 0 12px}h3{font-size:21px;margin:30px 0 8px}p,li{color:#44433f}.summary{font-size:20px;color:var(--muted);max-width:700px}.policy{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:clamp(24px,6vw,58px);margin-bottom:80px}.policy a{color:var(--blue-ink)}ul{padding-left:22px}.footer{padding:30px 0 46px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
@@ -13,12 +13,12 @@
 <body>
   <main class="shell">
     <nav class="nav"><strong>Vocatim</strong><a href="index.html">Back to app overview</a></nav>
-    <header class="hero"><span class="tag">Effective 20 August 2026</span><h1>Privacy policy</h1><p class="summary">Recordings and transcripts stay under your control. Vocatim has no user accounts and no backend that receives your recording content.</p></header>
+    <header class="hero"><span class="tag">Effective 5 September 2026</span><h1>Privacy policy</h1><p class="summary">You choose where transcription happens. Offline mode processes audio on your device. Optional online transcription sends selected audio directly to your chosen provider. Vocatim has no user accounts and no developer-operated backend that receives your recording content.</p></header>
     <article class="policy">
       <h2>1. Information handled by Vocatim</h2>
       <h3>On-device content</h3>
-      <p>Recordings, transcripts, notes, local AI summaries, speaker labels, attachments, and search data are stored in the app's private storage on your device. Speech recognition and the built-in local AI tools run on your device. This content is not sent to us.</p>
-      <p>You can explicitly move content out of the app by sharing or exporting it, choosing a backup destination, or enabling optional Cloud AI. Android system backup is limited to non-sensitive app settings; recordings, transcripts, backup passwords, API keys, and purchase entitlements are excluded.</p>
+      <p>Recordings, transcripts, notes, local AI summaries, speaker labels, attachments, and search data are stored in the app's private storage on your device. Offline speech recognition and the built-in local AI tools run on your device after the relevant models are downloaded. This content is not sent to the Vocatim developer.</p>
+      <p>You can explicitly move content out of the app by sharing or exporting it, choosing a backup destination, using online transcription, or enabling optional Cloud AI. Android system backup is limited to non-sensitive app settings; recordings, transcripts, backup passwords, API keys, and purchase entitlements are excluded.</p>
       <h3>Advertising in the free version</h3>
       <p>The free version uses the Google Mobile Ads SDK (AdMob). To provide, measure, secure, and limit ads, Google may collect or share:</p>
       <ul><li>device or other identifiers, including the Android advertising ID when available;</li><li>approximate location derived from the IP address;</li><li>app and advertising interactions;</li><li>diagnostics and performance information.</li></ul>
@@ -27,7 +27,11 @@
       <p>Buying <strong>Remove ads</strong> or owning the retired <strong>Vocatim Lifetime</strong> product prevents Vocatim from making further ad requests after Google Play confirms the entitlement.</p>
       <h3>Google Play Billing</h3>
       <p>Google Play processes Remove ads purchases. Vocatim receives the purchase status and product identifier needed to grant the ad-free entitlement. We do not receive payment card details.</p>
-      <h3>Optional Cloud AI</h3>
+      <h3>Optional online audio transcription</h3>
+      <p>If you select online transcription and configure your own Groq or OpenAI API key, Vocatim uploads the selected recording directly from your device to that provider over HTTPS for speech-to-text processing or supported translation to English. The provider receives the audio, your API authentication, selected model and language options, and ordinary network metadata such as your IP address. Audio may be compressed and divided into segments to handle long recordings. A local copy remains on your device.</p>
+      <p>Online processing requires internet access and is governed by the selected provider's terms, privacy policy, retention settings, quotas, and charges. An in-app Remove ads purchase does not pay for provider usage. Review <a href="https://groq.com/privacy-policy/">Groq's privacy policy</a> or <a href="https://openai.com/policies/privacy-policy/">OpenAI's privacy policy</a> before sending audio. Do not assume that online audio stays only on your device. Choose an offline model to transcribe locally instead.</p>
+      <p>Online transcription settings and API keys are stored in the app's private secrets storage, excluded from Android backup and Vocatim encrypted backups, and can be cleared in Settings. API keys are sent only to the selected provider to authorize its requests, not to the Vocatim developer.</p>
+      <h3>Optional Cloud AI for transcript text</h3>
       <p>Cloud AI is off by default. If you configure a provider and API key, Vocatim sends only the transcript text you choose directly from your device to that provider for the requested summary, question, or translation. Your use is governed by that provider's privacy policy.</p>
       <p>The provider URL, model selection, and API key are stored in the app's private storage and excluded from Android backup and Vocatim encrypted backups. They are never sent to us and can be removed in Settings.</p>
       <h3>Model downloads</h3>
@@ -35,10 +39,10 @@
       <h2>2. Permissions</h2>
       <ul><li><strong>Microphone:</strong> records audio only when you use a recording feature.</li><li><strong>Notifications:</strong> shows recording, transcription, and summary progress.</li><li><strong>Advertising ID:</strong> used by Google Mobile Ads for advertising purposes when available.</li><li><strong>Biometric or device credential:</strong> used locally when you enable app or note locking.</li></ul>
       <h2>3. Retention and deletion</h2>
-      <p>Vocatim stores content on your device until you delete it. Deleting a transcript permanently removes its stored transcript and associated audio after it leaves Trash. Clearing Cloud AI settings removes the provider configuration and API key. Uninstalling removes app data according to Android's uninstall behavior.</p>
-      <p>Google and Cloud AI providers retain data according to their own policies. We cannot delete data held directly by those third parties; use their privacy controls or contact them.</p>
+      <p>Vocatim stores content on your device until you delete it. Deleting a transcript permanently removes its stored transcript and associated audio after it leaves Trash. Clearing online transcription or Cloud AI settings removes the respective provider configuration and API key. Uninstalling removes app data according to Android's uninstall behavior. Exported files and backups in destinations you chose must be deleted separately.</p>
+      <p>Google and online processing providers retain data according to their own policies and your provider account settings. Deleting a recording or clearing a key in Vocatim does not request deletion from a provider. We cannot delete data held directly by those third parties; use their privacy controls or contact them.</p>
       <h2>4. Security</h2>
-      <p>Vocatim uses Android private storage, optional device authentication, optional screenshot blocking, and password-protected AES-256 encrypted backups. No storage or transmission method is guaranteed to be completely secure.</p>
+      <p>Vocatim uses Android private storage, optional device authentication, optional screenshot blocking, and password-protected AES-256 encrypted backups. These backups include transcript text, titles, and settings, not audio files or API keys. Online transcription uses HTTPS to the supported provider. No storage or transmission method is guaranteed to be completely secure.</p>
       <h2>5. Children</h2>
       <p>Vocatim is not directed to children under 13. If you believe a child has provided information to an advertising or Cloud AI provider through Vocatim, contact us and the relevant provider.</p>
       <h2>6. Changes</h2>
