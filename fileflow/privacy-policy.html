@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FileFlow: File Manager &mdash; Privacy Policy</title>
+<meta name="description" content="Privacy policy for FileFlow: File Manager, an Android file manager by F7 Developer.">
+<link rel="canonical" href="https://fareza777.github.io/fileflow/privacy-policy.html">
+<style>
+  :root { --paper:#F5EDDE; --raised:#FBF6EC; --ink:#0B1622; --soft:#4A5A66; --accent:#C55E3F; --line:#E0D6C2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:56px 24px 96px; }
+  h1 { font-family:Georgia, "Times New Roman", serif; font-size:40px; line-height:1.15; margin:0 0 8px; letter-spacing:-0.5px; }
+  .sub { color:var(--accent); font-weight:600; margin:0 0 4px; }
+  .meta { color:var(--soft); font-size:14px; margin:0 0 32px; }
+  h2 { font-family:Georgia, serif; font-size:22px; margin:38px 0 10px; }
+  p, li { color:var(--soft); }
+  strong { color:var(--ink); }
+  ul, ol { padding-left:22px; }
+  code { background:var(--raised); border:1px solid var(--line); border-radius:6px; padding:1px 5px; font-size:14px; word-break:break-word; }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; }
+  th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--ink); font-weight:600; }
+  a { color:var(--accent); word-break:break-word; }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--soft); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="sub">FILEFLOW: FILE MANAGER</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 28 October 2026</p>
+<p>FileFlow: File Manager (package <code>com.f7developer.fileflow</code>) is an Android file
+manager developed by <strong>F7 Developer</strong> (Fajar M Reza). This policy explains, in
+plain language, what the app does and does not do with your information.</p>
+<h2>The short version</h2>
+<ul>
+<li>No account, no sign-up, no login.</li>
+<li>No analytics, no crash reporting, no telemetry from us.</li>
+<li><strong>Your files are never uploaded to us.</strong> There is no FileFlow server.</li>
+<li>The free app shows banner ads from <strong>Google AdMob</strong>. In the EEA, the UK and
+  other regions where it is required, you are asked for consent first through
+  Google's User Messaging Platform (UMP).</li>
+<li>An optional one-time purchase, <strong>Remove ads</strong>, is handled entirely by
+  <strong>Google Play Billing</strong>. We never see your card or payment details.</li>
+<li>Some features connect to the internet only when you use them: an optional
+  on-device AI search model download, remote storage you configure, and a local
+  "Transfer to PC" server.</li>
+</ul>
+<h2>What FileFlow accesses on your device</h2>
+<p><strong>Files and folders.</strong> FileFlow asks for "All files access"
+(<code>MANAGE_EXTERNAL_STORAGE</code>) because Android allows a file manager to do its job
+only with that permission. It is used to:</p>
+<ul>
+<li>list, open, copy, move, rename, compress, extract and delete files <strong>you</strong>
+  choose;</li>
+<li>read file names, sizes and dates and, on your device, file contents to build
+  search indexes, find duplicates and junk, inspect file types, remove metadata
+  from copies, and keep versions;</li>
+<li>run the Auto Rules and folder syncs you created, on the schedule you set.</li>
+</ul>
+<p><strong>Photos and documents (on-device search).</strong> Name search stores a row per file.
+Content search stores text extracted from readable documents (including PDFs)
+and small numeric vectors used to find similar documents. Photo search stores
+text recognised in photos, image labels and, only if you download the optional
+model, photo vectors. All of this stays in the app's private database on your
+device, can be rebuilt or deleted, and is never uploaded.</p>
+<p><strong>Installed apps list.</strong> The APK backup screen lists apps installed on your
+device so you can save their installers as files. The list is shown on the
+screen and is not sent anywhere.</p>
+<p><strong>Storage statistics.</strong> Used to show free space and what is using it.</p>
+<h2>Network connections</h2>
+<p>Browsing, rules, cleanup and local file operations never need a connection.
+FileFlow uses the network only for:</p>
+<ol>
+<li><strong>Ads (Google AdMob).</strong> See "Advertising and consent" below.</li>
+<li><strong>Google Play Billing.</strong> For the optional Remove ads purchase. See
+   "In-app purchase" below.</li>
+<li><strong>Optional on-device AI search model download.</strong> If you choose "meaning
+   search" for photos, FileFlow downloads a model of roughly 400 MB, which runs
+   entirely on your device afterwards. It is fetched over HTTPS from
+   <strong>Hugging Face</strong> (<code>huggingface.co</code>): the MobileCLIP2 model file from the
+   <code>anton96vice/mobileclip2_tflite</code> repository and the CLIP vocabulary and merge
+   files from the <code>openai/clip-vit-base-patch32</code> repository. The download is a
+   plain file request: no file, photo or personal data is sent, but, as with any
+   web request, the host sees your IP address and is subject to its own privacy
+   policy (<a href="https://huggingface.co/privacy">https://huggingface.co/privacy</a>). On-device text and label
+   recognition by Google ML Kit may also fetch its own models through Google
+   Play services the first time you use it.</li>
+<li><strong>Remote storage you configure (optional).</strong> If you add a WebDAV, S3, SFTP or
+   SMB location, the files you choose travel directly between your device and
+   <em>that</em> server, using the address and credentials you enter. The developer
+   never sees them. Saved credentials are encrypted with a key in the device's
+   keystore where the device provides one.</li>
+<li><strong>Transfer to PC (optional).</strong> When you start the transfer server, devices on
+   your local network that have the link or QR code (protected by a random
+   token in the link) can browse, download and upload files in the folder you
+   share. It runs only while you have started it and stops when you stop it.
+   Nothing goes through the internet or through us.</li>
+</ol>
+<p>There is no FileFlow cloud and no developer server. Nothing is sent to us.</p>
+<h2>Advertising and consent</h2>
+<p>The free version shows a small banner ad on the Home, Tools and Settings
+screens. Ads never appear in the file browser, search results, previews, or
+anywhere you are working with files.</p>
+<p>Ads are served by <strong>Google AdMob</strong>. To serve and measure ads, Google may
+collect and process data such as your device's advertising ID, IP address,
+approximate location derived from it, device and app information and ad
+interactions, as described in Google's policies
+(<a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a> and
+<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>). FileFlow declares the <code>AD_ID</code> permission
+for this purpose only. FileFlow itself does not receive or store this data.</p>
+<p><strong>Consent (EEA, UK, Switzerland and US states).</strong> Where required by law, such
+as under the GDPR/ePrivacy rules in the European Economic Area and the UK, or
+under US state privacy laws such as the CCPA/CPRA, FileFlow asks for your choice
+through Google's User Messaging Platform <strong>before</strong> any ad is requested. If you
+decline, ads are not requested. Where Google requires it, Settings shows an
+<strong>ad choices</strong> entry ("Change ad choices") so you can review or withdraw your
+choice at any time. You can also reset your advertising ID or opt out of ad
+personalisation in your device settings (usually Settings &gt; Google &gt; Ads).</p>
+<p>If you buy <strong>Remove ads</strong>, FileFlow stops requesting ads and no longer starts
+the consent form or the ad SDK on that device.</p>
+<h2>In-app purchase (Google Play Billing)</h2>
+<p><strong>Remove ads</strong> is a one-time, non-subscription purchase handled entirely by
+Google Play. Your payment method and billing details are processed by Google
+and are never visible to or stored by FileFlow or the developer. The app only
+asks Google Play whether your Google account owns the product and remembers
+the answer on your device so ads stay off without a connection. "Restore
+purchases" in Settings re-checks it, for example on a new phone. Refunds follow
+Google Play's refund policy; if a purchase is refunded, ads return the next
+time the app checks with Google Play.</p>
+<h2>What FileFlow does not do</h2>
+<ul>
+<li>No account and no developer-side storage of your information.</li>
+<li>No analytics, crash reporting or telemetry.</li>
+<li>No upload of your files, photos or search indexes to the developer.</li>
+<li>No access to your contacts, camera, microphone, location or calendar.</li>
+</ul>
+<h2>Where your data lives and how to delete it</h2>
+<p>Everything FileFlow remembers - rules, history, trash index, settings, search
+indexes, photo vectors, version store, sync jobs, remote-storage credentials
+and the remembered purchase - lives in the app's private storage on your device.
+Uninstalling the app or clearing its data in Android settings removes it. You
+can also clear rule history (Rules &gt; History), delete the downloaded model
+(photo search) and delete stored versions (Versions) inside the app.</p>
+<p>Files you delete go to <strong>FileFlow Trash</strong>, a hidden <code>.fileflow/trash</code> folder on
+your own storage, and are removed permanently after the retention period you
+choose in Settings (30 days by default) or when you empty the trash. Because it
+sits on your storage rather than in the app's private folder, empty it before
+uninstalling if you want those files gone.</p>
+<p>Because the developer does not receive or store personal data, there is nothing
+held by the developer to delete. Data processed by Google (advertising and
+billing data) is governed by Google's policies and your Google account controls
+(<a href="https://myaccount.google.com">https://myaccount.google.com</a>).</p>
+<h2>Permissions and why each one exists</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All files access (<code>MANAGE_EXTERNAL_STORAGE</code>)</td>
+<td>Browse and organise files outside the app's own folder - the core function of a file manager.</td>
+</tr>
+<tr>
+<td><code>READ_EXTERNAL_STORAGE</code> (up to Android 12L) / <code>WRITE_EXTERNAL_STORAGE</code> (up to Android 10)</td>
+<td>The same access on older Android versions.</td>
+</tr>
+<tr>
+<td><code>POST_NOTIFICATIONS</code></td>
+<td>Optional. Shows that a scheduled rule finished, the transfer server is running, or a model download or photo-reading pass is in progress.</td>
+</tr>
+<tr>
+<td><code>RECEIVE_BOOT_COMPLETED</code></td>
+<td>Re-arms your scheduled rules and folder syncs after the device restarts.</td>
+</tr>
+<tr>
+<td><code>FOREGROUND_SERVICE</code> / <code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
+<td>Keeps the transfer server, the model download and photo reading running while the app is not on screen.</td>
+</tr>
+<tr>
+<td><code>INTERNET</code> / <code>ACCESS_NETWORK_STATE</code></td>
+<td>Ads, Google Play Billing, remote storage you configure, the local transfer server and model downloads you start.</td>
+</tr>
+<tr>
+<td><code>com.google.android.gms.permission.AD_ID</code></td>
+<td>Used only by Google AdMob for advertising.</td>
+</tr>
+</tbody>
+</table>
+<h2>Children</h2>
+<p>FileFlow is a general-purpose utility and is not directed at children. It does
+not knowingly collect personal information from anyone, including children.
+Ad requests are not tagged for child-directed treatment because the app is not
+designed for children.</p>
+<h2>Your rights</h2>
+<p>Depending on where you live (for example the EEA, the UK, or US states such as
+California), you may have rights to access, correct, delete or object to the
+processing of personal data. The developer holds no personal data about you, so
+requests about advertising data should go to Google through your Google account
+and ad settings. You can write to us any time with questions.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published at this address and
+the "last updated" date above will change.</p>
+<h2>Contact</h2>
+<p>Developer: <strong>F7 Developer</strong> (Fajar M Reza), Indonesia</p>
+<ul>
+<li>Email: <a href="mailto:fajar.mreza@gmail.com">fajar.mreza@gmail.com</a></li>
+<li>Website: <a href="https://f7developer.com">https://f7developer.com</a></li>
+<li>Policy URL: <a href="https://fareza777.github.io/fileflow/privacy-policy.html">https://fareza777.github.io/fileflow/privacy-policy.html</a></li>
+</ul>
+  <footer>
+    FileFlow: File Manager &mdash; an Android file manager. Developer: F7 Developer (Fajar M Reza).
+  </footer>
+</main>
+</body>
+</html>
