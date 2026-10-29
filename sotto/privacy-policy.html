@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sotto: Offline Text to Speech &mdash; Privacy Policy</title>
+<meta name="description" content="Privacy policy for Sotto: Offline Text to Speech, an Android app by F7 Developer.">
+<link rel="canonical" href="https://fareza777.github.io/sotto/privacy-policy.html">
+<style>
+  :root { --paper:#F5EDDE; --raised:#FBF6EC; --ink:#0B1622; --soft:#4A5A66; --accent:#C55E3F; --line:#E0D6C2; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--paper); color:var(--ink);
+         font:16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:56px 24px 96px; }
+  h1 { font-family:Georgia, "Times New Roman", serif; font-size:40px; line-height:1.15; margin:0 0 8px; letter-spacing:-0.5px; }
+  .sub { color:var(--accent); font-weight:600; margin:0 0 4px; }
+  .meta { color:var(--soft); font-size:14px; margin:0 0 32px; }
+  h2 { font-family:Georgia, serif; font-size:22px; margin:38px 0 10px; }
+  p, li { color:var(--soft); }
+  strong { color:var(--ink); }
+  ul, ol { padding-left:22px; }
+  code { background:var(--raised); border:1px solid var(--line); border-radius:6px; padding:1px 5px; font-size:14px; word-break:break-word; }
+  table { width:100%; border-collapse:collapse; margin:14px 0; font-size:15px; }
+  th, td { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--ink); font-weight:600; }
+  a { color:var(--accent); word-break:break-word; }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--soft); font-size:14px; }
+</style>
+</head>
+<body>
+<main>
+  <p class="sub">SOTTO: OFFLINE TEXT TO SPEECH</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Last updated: 28 October 2026</p>
+<p>Sotto: Offline Text to Speech (package <code>com.sottovoice.sotto</code>) is an offline text-to-speech app for Android developed by <strong>F7 Developer</strong> (Fajar M. Reza). This policy describes exactly what the app does with data, including the narrow cases where it uses the network.</p>
+<h2>The short version</h2>
+<ul>
+<li>There is no account, no sign-in, and no cloud sync.</li>
+<li>Speech is generated on your device. Your text, documents, and audio are never uploaded to us.</li>
+<li>Sotto contains <strong>no analytics, no crash reporting, and no telemetry</strong>. The upstream SDK's analytics client was removed from the source.</li>
+<li>The app only uses the network in three situations: downloading a voice model you asked for, fetching an article link you pasted, and serving ads (unless you enable Offline Mode or have removed ads).</li>
+</ul>
+<h2>What is processed on your device</h2>
+<table>
+<tr><th>Data</th><th>Where it lives</th><th>Purpose</th></tr>
+<tr><td>Text you type in Studio</td><td>Memory; saved only if you generate audio</td><td>Speech synthesis</td></tr>
+<tr><td>Imported documents (PDF/EPUB/TXT)</td><td>App-private storage</td><td>Reading aloud</td></tr>
+<tr><td>Extracted article text</td><td>App-private storage</td><td>Reading aloud</td></tr>
+<tr><td>Generated audio (WAV/MP3)</td><td>App-private storage</td><td>Playback, export, sharing</td></tr>
+<tr><td>Bookmarks, playlists, progress</td><td>Local database</td><td>Resume and organisation</td></tr>
+<tr><td>Voice, speed, model, theme settings</td><td>Local preferences</td><td>App behaviour</td></tr>
+</table>
+<p>None of this leaves the device unless <strong>you</strong> explicitly share an exported audio file using the system share sheet.</p>
+<h2>Network activity</h2>
+<ol>
+<li><strong>Voice model downloads.</strong> Sotto ships with the Nano INT8 model inside the app. Micro and Mini are optional downloads from Hugging Face (<code>huggingface.co/KittenML/...</code>) and are started only when you tap Download. Each file is verified against a SHA-256 hash built into the app.</li>
+<li><strong>Article import.</strong> When you paste a link into "Read a link", Sotto requests that page once, extracts the readable text, stores it locally, and does not request it again. The request goes directly to the publisher's server; no proxy is involved.</li>
+<li><strong>Advertising (Google AdMob).</strong> Unless Offline Mode is enabled or ads have been removed, the app loads banner, interstitial, and rewarded ads through the Google Mobile Ads SDK. Ads are never shown on reading screens, during narration, or during playback. Enabling <strong>Settings &rarr; Privacy &rarr; Offline Mode</strong> blocks every ad request.</li>
+</ol>
+<p>Sotto has no servers of its own. There is no endpoint that receives your text, audio, documents, or usage.</p>
+<h2>Advertising data (Google AdMob)</h2>
+<p>To serve, measure and protect ads, Google may collect and share:</p>
+<table>
+<tr><th>Data</th><th>Purpose</th></tr>
+<tr><td>Device or other identifiers (e.g. advertising ID)</td><td>Advertising, measurement, fraud prevention</td></tr>
+<tr><td>Approximate location (derived from IP address)</td><td>Ad relevance and compliance</td></tr>
+<tr><td>App interactions (e.g. ad views and taps)</td><td>Advertising and analytics</td></tr>
+<tr><td>Crash logs and diagnostics from the ads SDK</td><td>Ads SDK stability</td></tr>
+</table>
+<p>This data is processed by Google under its own policy: <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. You can reset or delete your advertising ID, or opt out of personalized ads, in your Android device settings. Where required by law (for example in the EEA, the UK and Switzerland), Sotto uses Google's User Messaging Platform to ask for your consent choices before ads are requested.</p>
+<h2>Permissions</h2>
+<table>
+<tr><th>Permission</th><th>Why</th></tr>
+<tr><td><code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code></td><td>Optional model downloads, article import, ads</td></tr>
+<tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td><td>Keep narration and exported audio playing with a media notification</td></tr>
+<tr><td><code>POST_NOTIFICATIONS</code></td><td>Show the playback notification on Android 13+</td></tr>
+<tr><td><code>WAKE_LOCK</code></td><td>Keep playback alive while the screen is off</td></tr>
+</table>
+<p>Sotto does <strong>not</strong> request storage permissions. File imports use the Android system file picker, and exports stay in app-private storage until you share them.</p>
+<h2>In-app purchase</h2>
+<p>"Remove Ads" is a one-time in-app purchase (USD 4.99 or the local equivalent) processed entirely by Google Play Billing. Sotto never sees or stores payment details. After a successful purchase the app stores a local "ads removed" flag and asks Google Play to restore it on future installs. Purchase history is handled by Google under its own privacy policy.</p>
+<h2>Data retention and deletion</h2>
+<p>All app data is stored in the app's private sandbox. You can delete individual documents, audio files, bookmarks, and playlists inside the app. Uninstalling Sotto removes every file and the database. Because there is no account and no server copy, deletion is immediate and complete.</p>
+<p>Android's automatic backup is disabled for Sotto (<code>allowBackup="false"</code>), so app data is not copied to Google Drive.</p>
+<h2>Children</h2>
+<p>Sotto is a general-audience reading tool and is not directed to children under 13. It does not knowingly collect personal information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the "last updated" date above changes and the new text ships in the next app release.</p>
+<h2>Contact</h2>
+<p>F7 Developer &mdash; <a href="mailto:fajar.mreza@gmail.com">fajar.mreza@gmail.com</a></p>
+<footer>&copy; 2026 F7 Developer. Sotto: Offline Text to Speech.</footer>
+</main>
+</body>
+</html>
