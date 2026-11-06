@@ -22,13 +22,13 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 
 <h2>Advertising – Google AdMob</h2>
 <p>The game may show Google AdMob ads of three kinds: a banner on menu screens only (placed in the display safe area so it does not cover gameplay or system bars), interstitial ads, and opt-in rewarded ads that you choose to watch. The ads SDK in this build is Google Mobile Ads for Unity, package <code>com.google.ads.mobile</code> 11.6.</p>
-<p>To serve, limit frequency of and measure ads, and to help prevent fraud, Google may collect or receive third-party identifiers such as the device advertising ID, device and app information, an IP address (used to estimate approximate location, not precise location), and ad interaction data. Depending on your consent choices, ads may be personalised (personal) or non-personalised (non-personal). Your save data, settings and in-game progress are never shared with the ads SDK by the developer. See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<p>To serve ads, limit how often they appear, measure them, and help prevent fraud, Google may collect or receive third-party identifiers such as the device advertising ID, device and app information, an IP address (used to estimate approximate location, not precise location), and ad interaction data. Depending on your consent choices, ads may be personalised (personal) or non-personalised (non-personal). Your save data, settings and in-game progress are never shared with the ads SDK by the developer. See <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>, <a href="https://policies.google.com/technologies/ads">Google advertising technologies</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
 <h2>Consent – Google User Messaging Platform (UMP)</h2>
-<p>When required by law (for example in the EEA, the UK, Switzerland and certain US states), the game shows a consent message provided by Google's User Messaging Platform <strong>before</strong> any ad is requested. Ads are only loaded after the consent status allows it. When Google makes a privacy-options entry applicable, that control is shown so you can review or change your choices, including from Settings when it applies. Your consent choice is stored on your device by the UMP SDK. You can also reset or delete your advertising ID, or opt out of ads personalisation, in Android settings.</p>
+<p>When required by law (for example in the EEA, the UK, Switzerland and certain US states), the game shows a consent message provided by Google's User Messaging Platform <strong>before</strong> any ad is requested. Ads are only loaded after the consent status allows it. When Google makes a privacy-options entry applicable, that control is shown so you can review or change your choices. Your consent choice is stored on your device by the UMP SDK. You can also reset or delete your advertising ID, or opt out of ads personalisation, in Android settings.</p>
 
 <h2>Purchases – Google Play Billing</h2>
-<p>The optional one-time product <code>remove_ads</code> (USD 4.99, or the local price set by Google Play) is processed by Google Play Billing through Unity IAP, package <code>com.unity.purchasing</code> 5.5. The game only receives whether you own the product; it never sees your payment details. Purchases are governed by the <a href="https://payments.google.com/legaldocument?family=0.buyer&amp;hl=en">Google Payments privacy notice</a>.</p>
+<p>The optional one-time product <code>remove_ads</code> (USD 4.99, or the local price set by Google Play) is processed by Google Play Billing through Unity IAP, package <code>com.unity.purchasing</code> 5.5. The game only receives whether you own the product; it never sees your payment details. Purchases are governed by the <a href="https://payments.google.com/legaldocument?family=0.privacynotice&amp;hl=en">Google Payments privacy notice</a>.</p>
 <p>Buying <code>remove_ads</code> removes <strong>banner and interstitial</strong> ads only. <strong>Opt-in rewarded ads remain available</strong> after the purchase. Entitlement is remembered in local PlayerPrefs / app-private data and can be restored from Google Play purchase history after reinstall. Refunds follow Google Play's policy.</p>
 
 <h2>Data handled on your device</h2>
@@ -39,7 +39,7 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 <tr><td>Ad consent choice</td><td>On-device storage used by the Google UMP SDK</td><td>To honour your advertising choices</td></tr>
 <tr><td>Remove-ads purchase entitlement</td><td>Unity PlayerPrefs / app-private storage, verified with Google Play</td><td>To keep banner and interstitial ads off after purchase or reinstall</td></tr>
 </table>
-<p>There is no developer account and no cloud copy of this data. The developer cannot read your saves from a server.</p>
+<p>There is no player account and no cloud copy of this data. The developer cannot read your saves from a server.</p>
 
 <h2>What the game does not do</h2>
 <ul>
@@ -61,8 +61,8 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 
 <h2>Your choices</h2>
 <ul>
-<li>Review or change ad consent when privacy options are shown (including from Settings when that control applies), or reset your advertising ID in Android settings.</li>
-<li>Delete local progress, settings, consent records and the locally cached purchase flag via Android Settings → Apps → Ashen Hour: Action RPG → Storage → Clear data. Clearing data does not cancel a Google Play purchase; Google Play can restore the <code>remove_ads</code> entitlement afterwards.</li>
+<li>Review or change ad consent when privacy options are shown, or reset your advertising ID in Android settings.</li>
+<li>Delete local progress, settings, consent records and the locally cached purchase flag via Android Settings → Apps → Ashen Hour: Action RPG → Storage (or Storage &amp; cache) → Clear data / Clear storage. Clearing data does not cancel a Google Play purchase; Google Play can restore the <code>remove_ads</code> entitlement afterwards.</li>
 <li>Uninstalling the game removes its private storage on that device.</li>
 <li>Because the developer does not operate an account or cloud save, there is no online profile to delete. Data processed by Google (ads and billing) is governed by Google's policies and your Google account controls.</li>
 </ul>
