@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PocketServer – Home Server &amp; NAS — Privacy Policy</title>
+  <style>
+    :root { color-scheme: dark; --ink:#f1f5ef; --muted:#a8b8ab; --accent:#7fd6a4; --accent2:#e8c07a; --bg:#0b1512; --panel:#13201b; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:radial-gradient(circle at top right,#16302a 0,#0b1512 55%); color:var(--ink); font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif; }
+    main { max-width:820px; margin:0 auto; padding:56px 24px 72px; }
+    .eyebrow { color:var(--accent); letter-spacing:.18em; font-size:12px; font-weight:700; text-transform:uppercase; }
+    h1 { margin:.35em 0 .15em; font:700 clamp(28px,5.5vw,48px)/1.08 Georgia,serif; }
+    h2 { margin:2.1em 0 .35em; color:var(--accent); font:700 22px/1.2 Georgia,serif; }
+    p, li { color:var(--muted); }
+    strong { color:var(--ink); }
+    a { color:var(--accent); }
+    .meta { color:var(--muted); margin:0 0 2em; }
+    table { width:100%; border-collapse:collapse; margin:.6em 0 1.4em; font-size:14.5px; }
+    th, td { text-align:left; padding:8px 10px; border-bottom:1px solid #22392f; vertical-align:top; }
+    th { color:var(--ink); font-weight:600; }
+    code { background:#17281f; padding:1px 5px; border-radius:4px; font-size:13px; }
+    footer { margin-top:44px; color:var(--muted); font-size:13px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">F7 Developer — PocketServer</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective date: November 15, 2026</p>
+
+  <p>PocketServer – Home Server &amp; NAS turns an Android phone into a small self-hosted server. It runs a Linux environment, an SSH server, a web server and a control panel <strong>on your own device</strong>. This policy explains what the app stores, what leaves your phone, and what never does.</p>
+
+  <h2>The short version</h2>
+  <ul>
+    <li>Your files, databases, SSH keys, passwords and server configuration stay on your phone.</li>
+    <li>F7 Developer runs no account system, no cloud sync and no analytics backend for PocketServer.</li>
+    <li>We cannot read your server, your sites or your files. There is no server-side copy to read.</li>
+    <li>The only third parties that receive data are the advertising and billing services described below.</li>
+  </ul>
+
+  <h2>What the app stores on your device</h2>
+  <table>
+    <tr><th>Data</th><th>Where and why</th></tr>
+    <tr><td>Linux root filesystem and installed packages</td><td>Inside the app's private storage. Created when you first start the environment.</td></tr>
+    <tr><td>Websites, uploads, databases and media you host</td><td>In the app's private storage or a folder you choose (SD card, USB drive, shared storage).</td></tr>
+    <tr><td>SSH host keys, user accounts, passwords</td><td>On the device only. They are never transmitted to F7 Developer.</td></tr>
+    <tr><td>Control panel settings, module list, theme, logs</td><td>Local app preferences and files.</td></tr>
+    <tr><td>Remote-access credentials (tunnel token, Tailscale auth key)</td><td>Stored locally when you enable remote access yourself. Optional and off by default.</td></tr>
+  </table>
+  <p>Removing the app, or clearing its data in Android Settings, deletes this storage. Export anything you want to keep first.</p>
+
+  <h2>Network activity — what actually leaves the phone</h2>
+  <p>PocketServer is a server: traffic leaves your phone only because you asked it to serve something, or because a component you enabled talks to its own service.</p>
+  <ul>
+    <li><strong>Local network</strong> — other devices on your Wi-Fi connect to your server on the ports you open. Those connections go directly between your devices.</li>
+    <li><strong>Package downloads</strong> — when you install or update Linux packages or optional app modules, the app downloads them from the upstream repositories or project sources you selected (for example Alpine Linux mirrors, GitHub releases, or an app's own download URL).</li>
+    <li><strong>Optional remote access</strong> — if you turn on a Cloudflare Tunnel or Tailscale, that traffic passes through the provider you chose, under their terms and privacy policy. It is off until you configure it.</li>
+    <li><strong>Ads and billing</strong> — described below.</li>
+  </ul>
+  <p>F7 Developer does not operate an intermediary server, does not proxy your traffic, and does not receive your hostnames, IP addresses, logs or content.</p>
+
+  <h2>Permissions and why they are requested</h2>
+  <table>
+    <tr><th>Permission</th><th>Purpose</th></tr>
+    <tr><td>Internet, network state, Wi-Fi state, multicast</td><td>Serve content, discover local devices, keep the server reachable.</td></tr>
+    <tr><td>Foreground service (special use) and wake lock</td><td>Keep the server running while the screen is off, with a visible notification.</td></tr>
+    <tr><td>Notifications</td><td>The ongoing server notification, plus optional alerts.</td></tr>
+    <tr><td>Start at boot</td><td>Optionally restart the server after a reboot. Off unless you enable it.</td></tr>
+    <tr><td>Ignore battery optimizations</td><td>Asked only when you choose to keep the server alive; Android otherwise suspends it.</td></tr>
+    <tr><td>All files access (manage external storage)</td><td>Only when you choose to keep server data on an SD card or USB drive, or browse shared storage. Without it the app uses private storage.</td></tr>
+    <tr><td>Install unknown apps</td><td>Only to install an optional app module that you pick. The app never installs anything silently.</td></tr>
+    <tr><td>Camera and microphone</td><td>Used only while the optional IP-camera module is switched on, and only to stream to the viewers you configure.</td></tr>
+    <tr><td>Advertising ID</td><td>Required by the Google Mobile Ads SDK for Android 13 and later.</td></tr>
+  </table>
+  <p>The app does not request contacts, SMS, call log, precise GPS, or health data.</p>
+
+  <h2>Advertising and consent</h2>
+  <p>The free version shows a <strong>banner</strong>, occasional <strong>interstitials</strong> at natural breaks, and an optional <strong>rewarded video</strong> you choose to watch. Ads are never drawn over a running terminal session, an active file transfer, or the control panel while a service is starting.</p>
+  <p>The Google Mobile Ads SDK may collect and share your IP address, approximate location derived from IP, app and ad interaction data, diagnostics and device or account identifiers (including the advertising ID where permitted) for advertising, measurement, personalisation and fraud prevention. That data is encrypted in transit. See <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" rel="noopener">Google's Mobile Ads SDK data disclosure</a>, the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" rel="noopener">Google advertising technologies</a>.</p>
+  <p>Where required (EEA, UK, Switzerland and applicable US state laws), consent is collected with <strong>Google's User Messaging Platform</strong> before any ad request. Declining personalised ads does not remove ads; it limits personalisation. You can reopen the privacy options from Settings.</p>
+
+  <h2>In-app purchase</h2>
+  <p>The optional <strong>Remove Ads</strong> purchase is a one-time non-consumable product offered through <strong>Google Play Billing</strong> for USD 4.99. The final localised price is set by Google Play. A completed purchase removes banner and interstitial ads for that Google Play account and is restored from Play purchase history. Google Play processes payment, order, tax and refund information under its own privacy policy. The app receives only the purchase result needed to grant the entitlement and never sees your card details.</p>
+
+  <h2>What the app does not do</h2>
+  <ul>
+    <li>It does not send your files, sites, databases, logs, SSH keys or passwords to F7 Developer.</li>
+    <li>It does not include analytics, crash-reporting or attribution SDKs beyond the advertising SDK named above.</li>
+    <li>It does not expose your server to the internet unless you explicitly enable remote access or open a port.</li>
+    <li>It does not scan, collect or upload the contents of your device.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>PocketServer is a technical tool for general audiences and is not directed to children under 13.</p>
+
+  <h2>Your choices and deletion</h2>
+  <ul>
+    <li>Stop the server and delete its data from inside the app, or use Android <strong>Settings → Apps → PocketServer → Storage → Clear data</strong>.</li>
+    <li>Disable remote access at any time; that also stops the tunnel.</li>
+    <li>Change ad consent from the consent form or Settings → Privacy options.</li>
+    <li>Manage or cancel purchases through Google Play.</li>
+  </ul>
+  <p>For a privacy request or question, use the developer contact address shown on the Google Play listing for PocketServer.</p>
+
+  <h2>Security</h2>
+  <p>Server data stays in the app sandbox unless you point it at shared storage. Signing keys, Play credentials and payment secrets are never stored in the app or its assets. You are responsible for the accounts, passwords and ports you configure on your own server.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the effective date above is updated and the new version ships with the app. Material changes are reflected in the store listing where required.</p>
+
+  <footer>F7 Developer · PocketServer – Home Server &amp; NAS · <a href="./">Home</a></footer>
+</main>
+</body>
+</html>
